@@ -1,0 +1,15 @@
+
+ethereum-data:
+  container_name: ethereum-data
+  image: chrysalis/gethimage:1.2
+  volumes:
+    - /home/ethereum/
+ethereum:
+  container_name: ethereum
+  image: chrysalis/gethimage:1.2
+  volumes_from:
+    - ethereum-data
+  ports:
+    - "30303:30303"
+    - "8545:8545"
+command: geth --rpc --rpcaddr "0.0.0.0" -rpcapi "eth,miner,personal"
