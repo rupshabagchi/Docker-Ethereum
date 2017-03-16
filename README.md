@@ -31,3 +31,5 @@ Clone this repository and
 
 ### Credits
 The steps described in this thread :http://ethereum.stackexchange.com/questions/1516/how-can-i-completely-automate-a-docker-image-and-dockerfile-for-a-geth-test-netw
+
+Fixed the issues while setting it up, added ethereum intelligent stats to check the gas consumption, etc.
