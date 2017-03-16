@@ -9,6 +9,9 @@ ethereum:
   image: chrysalis/gethimage:1.2
   volumes_from:
     - ethereum-data
+ ethstats:
+   container_name: ethstat
+   image: chrysalis/ethstat
   ports:
     - "30303:30303"
     - "8545:8545"
