@@ -1,14 +1,21 @@
+services:
+    node:
+        build: .
+        image: chrysalis/gethimage:1.2
+        expose:
+            - "30303"
+        volumes:
+            - connection_data:/tmp
 
-ethereum-data:
-  container_name: ethereum-data
-  image: chrysalis/gethimage:1.2
-  volumes:
-    - /home/ethereum/
-ethereum:
-  container_name: ethereum
-  image: chrysalis/gethimage:1.2
-  volumes_from:
-    - ethereum-data
+ 
+ volumes:
+    connection_data:
+        driver: local
+        driver_opts:
+            type: tmpfs
+            device: tmpfs
+            o: "size=10m"
+            
  ethstats:
    container_name: ethstat
    image: chrysalis/ethstat
