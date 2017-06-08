@@ -1,8 +1,10 @@
-# Set up a private geth network using Docker containers and docker compose
+# Docker-Ethereum
+
+## Set up a private geth network using Docker containers and docker compose
 
 This runs a container with private ethereum chain with some precreates accounts and preallocated balances.
-
 There are two ways to get the system running:
+
 ## Docker container
 
 Use the build-image script to build the image from scratch or the following command:
